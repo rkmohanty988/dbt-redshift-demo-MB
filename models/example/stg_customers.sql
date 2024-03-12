@@ -1,4 +1,4 @@
---What is the .sql file name , with same name view or table will be created in db.
+--What is the .sql file name , with same name view or table will be created in db .
 
 With stg_customers AS (
   SELECT
