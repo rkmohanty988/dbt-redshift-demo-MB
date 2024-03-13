@@ -7,7 +7,7 @@ SELECT
     p.Product_ID,
     p.Product_Name,
     o.Quantity,
-    {{get_date_parts('Order_Date')}} as date_extract
+    {{ is_weekday('Order_Date')  }} as week_day_order
 FROM
     raw_data.orders o
 JOIN
