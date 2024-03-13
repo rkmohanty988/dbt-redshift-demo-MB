@@ -2,7 +2,6 @@
 
 select count(*) as num_orders_today
 from {{ref('stg_orders')}}
-where DATE(order_date) = sysdate
-GROUP BY Order_ID
-having count(*) >0
+where order_date = sysdate
+having count(*) > 0
 
